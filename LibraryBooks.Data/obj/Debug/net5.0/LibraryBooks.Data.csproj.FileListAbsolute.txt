@@ -1,0 +1,15 @@
+C:\Users\sasch\source\repos\LibraryBooks\LibraryBooks.Data\bin\Debug\net5.0\LibraryBooks.Data.deps.json
+C:\Users\sasch\source\repos\LibraryBooks\LibraryBooks.Data\bin\Debug\net5.0\LibraryBooks.Data.dll
+C:\Users\sasch\source\repos\LibraryBooks\LibraryBooks.Data\bin\Debug\net5.0\ref\LibraryBooks.Data.dll
+C:\Users\sasch\source\repos\LibraryBooks\LibraryBooks.Data\bin\Debug\net5.0\LibraryBooks.Data.pdb
+C:\Users\sasch\source\repos\LibraryBooks\LibraryBooks.Data\bin\Debug\net5.0\LibraryBooks.Common.dll
+C:\Users\sasch\source\repos\LibraryBooks\LibraryBooks.Data\bin\Debug\net5.0\LibraryBooks.Common.pdb
+C:\Users\sasch\source\repos\LibraryBooks\LibraryBooks.Data\obj\Debug\net5.0\LibraryBooks.Data.csproj.AssemblyReference.cache
+C:\Users\sasch\source\repos\LibraryBooks\LibraryBooks.Data\obj\Debug\net5.0\LibraryBooks.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sasch\source\repos\LibraryBooks\LibraryBooks.Data\obj\Debug\net5.0\LibraryBooks.Data.AssemblyInfoInputs.cache
+C:\Users\sasch\source\repos\LibraryBooks\LibraryBooks.Data\obj\Debug\net5.0\LibraryBooks.Data.AssemblyInfo.cs
+C:\Users\sasch\source\repos\LibraryBooks\LibraryBooks.Data\obj\Debug\net5.0\LibraryBooks.Data.csproj.CoreCompileInputs.cache
+C:\Users\sasch\source\repos\LibraryBooks\LibraryBooks.Data\obj\Debug\net5.0\LibraryBooks.Data.csproj.CopyComplete
+C:\Users\sasch\source\repos\LibraryBooks\LibraryBooks.Data\obj\Debug\net5.0\LibraryBooks.Data.dll
+C:\Users\sasch\source\repos\LibraryBooks\LibraryBooks.Data\obj\Debug\net5.0\ref\LibraryBooks.Data.dll
+C:\Users\sasch\source\repos\LibraryBooks\LibraryBooks.Data\obj\Debug\net5.0\LibraryBooks.Data.pdb
