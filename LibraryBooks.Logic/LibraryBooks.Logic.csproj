@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LibraryBooks.Common\LibraryBooks.Common.csproj" />
+    <ProjectReference Include="..\LibraryBooks.Services\LibraryBooks.Services.csproj" />
+  </ItemGroup>
+
+</Project>

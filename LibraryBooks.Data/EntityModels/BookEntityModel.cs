@@ -34,5 +34,7 @@ namespace LibraryBooks.Data.EntityModels
         public int Year { get; set; }
 
 
+
+        public List<TakeBooksEnityModel> TakeBooks { get; set; }
     }
 }

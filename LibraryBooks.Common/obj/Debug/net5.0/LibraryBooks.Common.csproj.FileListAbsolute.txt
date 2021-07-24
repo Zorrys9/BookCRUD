@@ -9,4 +9,3 @@ C:\Users\sasch\source\repos\LibraryBooks\LibraryBooks.Common\obj\Debug\net5.0\Li
 C:\Users\sasch\source\repos\LibraryBooks\LibraryBooks.Common\obj\Debug\net5.0\LibraryBooks.Common.dll
 C:\Users\sasch\source\repos\LibraryBooks\LibraryBooks.Common\obj\Debug\net5.0\ref\LibraryBooks.Common.dll
 C:\Users\sasch\source\repos\LibraryBooks\LibraryBooks.Common\obj\Debug\net5.0\LibraryBooks.Common.pdb
-C:\Users\sasch\source\repos\LibraryBooks\LibraryBooks.Common\obj\Debug\net5.0\LibraryBooks.Common.csproj.AssemblyReference.cache

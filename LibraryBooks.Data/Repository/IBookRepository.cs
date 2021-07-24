@@ -19,6 +19,12 @@ namespace LibraryBooks.Data.Repository
 
         void RemoveBook(Guid id);
 
+        void ReceivingBook(Guid id);
+
+        void ReturnBook(Guid id);
+
+        bool InStock(Guid bookId);
+
         List<BookEntityModel> GetBooks();
 
         List<BookEntityModel> GetBooks(SearchViewModel model);

@@ -173,6 +173,42 @@ namespace LibraryBooks.Data.Repository.Implementations
 
         }
 
+        public void ReceivingBook(Guid id)
+        {
+            var book = GetQuery().FirstOrDefault(item => item.Id == id);
+
+            book.CountBooks--;
+
+            Update(book);
+        }
+
+        public void ReturnBook(Guid id)
+        {
+            var book = GetQuery().FirstOrDefault(item => item.Id == id);
+
+            book.CountBooks++;
+
+            Update(book);
+        }
+
+
+        public bool InStock(Guid bookId)
+        {
+            var result = GetQuery().AsNoTracking().FirstOrDefault(book => book.Id == bookId);
+
+            if(result.CountBooks != 0)
+            {
+
+                return true;
+
+            }
+            else
+            {
+
+                return false;
+
+            }
+        }
 
         bool CheckBook(BookEntityModel model)
         {

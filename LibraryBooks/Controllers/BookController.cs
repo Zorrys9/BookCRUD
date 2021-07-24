@@ -1,6 +1,7 @@
 ﻿using LibraryBooks.Common.ViewModels;
 using LibraryBooks.Models;
 using LibraryBooks.Services.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -12,11 +13,11 @@ using System.Threading.Tasks;
 namespace LibraryBooks.Controllers
 {
     [ApiController]
-    public class HomeController : Controller
+    public class BookController : Controller
     {
         private readonly IBookService _bookService;
 
-        public HomeController(IBookService bookService)
+        public BookController(IBookService bookService)
         {
 
             _bookService = bookService;
@@ -24,6 +25,7 @@ namespace LibraryBooks.Controllers
         }
 
         [HttpPost("[action]")]
+        [Authorize(Roles = "Admin")]
         public IActionResult CreateBook([FromForm]BookViewModel model)
         {
             try
@@ -56,6 +58,7 @@ namespace LibraryBooks.Controllers
 
 
         [HttpPost("[action]")]
+        [Authorize(Roles = "Admin")]
         public IActionResult UpdateBook([FromForm]BookViewModel model)
         {
 
@@ -88,6 +91,7 @@ namespace LibraryBooks.Controllers
         }
 
         [HttpPost("[action]")]
+        [Authorize(Roles = "Admin")]
         public IActionResult RemoveBookToModel([FromForm]BookViewModel model)
         {
 
@@ -120,6 +124,7 @@ namespace LibraryBooks.Controllers
         }
 
         [HttpPost("[action]")]
+        [Authorize(Roles = "Admin")]
         public IActionResult RemoveBook([FromForm] Guid id)
         {
 
@@ -152,6 +157,7 @@ namespace LibraryBooks.Controllers
         }
 
         [HttpPost("[action]")]
+        [Authorize(Roles = "Admin, Client")]
         public List<BookViewModel> GetAllBooks()
         {
 
@@ -184,6 +190,7 @@ namespace LibraryBooks.Controllers
         }
 
         [HttpPost("[action]")]
+        [Authorize(Roles = "Admin, Client")]
         public List<BookViewModel> GetBooks([FromForm]SearchViewModel model)
         {
 

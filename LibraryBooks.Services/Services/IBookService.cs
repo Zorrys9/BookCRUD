@@ -19,6 +19,12 @@ namespace LibraryBooks.Services.Services
 
         void RemoveBook(Guid id);
 
+        void ReceivingBook(Guid bookId);
+
+        void ReturnBook(Guid bookId);
+
+        bool InStock(Guid bookId);
+
         List<BookViewModel> GetBooks();
 
         List<BookViewModel> GetBooks(SearchViewModel model);

@@ -84,6 +84,27 @@ namespace LibraryBooks.Services.Services.Implementations
 
         }
 
+        public void ReceivingBook(Guid bookId)
+        {
+
+            _bookRepository.ReceivingBook(bookId);
+
+        }
+
+        public void ReturnBook(Guid bookId)
+        {
+
+            _bookRepository.ReturnBook(bookId);
+
+        }
+
+        public bool InStock(Guid bookId)
+        {
+
+            return _bookRepository.InStock(bookId);
+
+        }
+
         public List<BookViewModel> GetBooks()
         {
 
@@ -101,7 +122,7 @@ namespace LibraryBooks.Services.Services.Implementations
             return ConvertToViewModels(books);
         }
 
-        List<BookViewModel> ConvertToViewModels(List<BookEntityModel> entities)
+        static List<BookViewModel> ConvertToViewModels(List<BookEntityModel> entities)
         {
             List<BookViewModel> result = new();
 

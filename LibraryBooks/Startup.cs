@@ -1,11 +1,15 @@
 using LibraryBooks.Data;
+using LibraryBooks.Data.EntityModels;
 using LibraryBooks.Data.Repository;
 using LibraryBooks.Data.Repository.Implementations;
+using LibraryBooks.Logic.Logics;
+using LibraryBooks.Logic.Logics.Implementations;
 using LibraryBooks.Services.Services;
 using LibraryBooks.Services.Services.Implementations;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -33,17 +37,36 @@ namespace LibraryBooks
         {
             services.AddControllersWithViews();
 
+
             services.AddSwaggerGen(c => c.SwaggerDoc("v1", new OpenApiInfo { Title = "My Api", Version = "v1" }));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
 
 
             services.AddTransient<IBookRepository, BookRepository>();
+            services.AddTransient<IUserRepository, UserRepository>();
+            services.AddTransient<ITakeBooksRepository, TakeBooksRepository>();
+
 
             services.AddTransient<IBookService, BookService>();
+            services.AddTransient<IUserService, UserService>();
+            services.AddTransient<ITakeBooksService, TakeBooksService>();
+
+            services.AddTransient<ILibraryLogic, LibraryLogic>();
 
             services.AddEntityFrameworkNpgsql()
                 .AddDbContext<LibraryContext>(opt => opt.UseNpgsql(Configuration.GetConnectionString("BookDB")));
+
+            services.AddIdentity<UserEntityModel, IdentityRole>(opt =>
+            {
+
+                opt.Password.RequireDigit = false;
+                opt.Password.RequireLowercase = false;
+                opt.Password.RequireNonAlphanumeric = false;
+                opt.Password.RequireUppercase = false;
+                opt.Password.RequiredLength = 3;
+
+            }).AddEntityFrameworkStores<LibraryContext>();
 
         }
 
@@ -60,6 +83,8 @@ namespace LibraryBooks
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
+            app.UseAuthentication();
 
             app.UseSwagger();
             app.UseSwaggerUI(opt =>
